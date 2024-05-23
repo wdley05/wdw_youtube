@@ -1,5 +1,10 @@
-.header__logo { //로고 
+.header__logo {
     border-bottom: 1px solid var(--black100);
+
+    @media (max-width: 800px){
+        border-bottom: 0;
+    }
+
     a {
         display: flex;
         padding: 10px;
@@ -23,7 +28,7 @@
     }
 }
 
-.header__menu { //헤더 왼쪽 메뉴 
+.header__menu {
     padding: 10px 0;
 
     .menu {
@@ -33,7 +38,7 @@
             margin-bottom: 5px;
 
             a {
-                font-size: 1rem; //_var.scss에서 설정한 폰트크기 
+                font-size: 1rem;
                 display: block;
                 padding: 0.9rem 2rem 0.9rem 3.125rem;
                 margin: 0 0.625rem;
@@ -103,6 +108,10 @@
     padding: 15px 0 10px;
     background-color: var(--blackAlpha100);
     backdrop-filter: blur(10px);
+
+    @media (max-width: 800px){
+        display: none;
+    }
 
     li {
         display: inline-block;
